@@ -1,0 +1,7 @@
+CC = BCC -P -I/bc/include -I../h -L/bc/lib
+LINK = TLINK /L /bc/lib
+LIB = TLIB 
+
+all: demo.exe
+demo.exe: demo.cc ../libs/bc/cwindow.lib
+	$(CC) demo.cc ../libs/bc/cwindow.lib

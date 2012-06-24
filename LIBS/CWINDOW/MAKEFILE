@@ -1,0 +1,9 @@
+all:: libs/djgpp/libcwin.a
+cwindow.o:: src/cwindow.cc
+	gcc -c -I./h src/cwindow.cc
+driver.o:: src/driver.cc
+	gcc -c -I./h src/driver.cc
+libs/djgpp/libcwin.a:: cwindow.o driver.o
+	ar rs libs/djgpp/libcwin.a cwindow.o driver.o
+	del *.o
+

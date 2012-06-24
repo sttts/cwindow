@@ -1,0 +1,12 @@
+CC = BCC -c -P -I/bc/include -I./h
+LIB = TLIB 
+
+all: libs/bc/cwindow.lib
+libs/bc/cwindow.lib: cwindow.obj driver.obj
+	del libs\bc\cwindow.lib > NUL
+	$(LIB) libs\bc\cwindow.lib +cwindow.obj +driver.obj
+	del *.obj
+driver.obj: src/driver.cc
+	$(CC) src/driver.cc
+cwindow.obj: src/cwindow.cc
+	$(CC) src/cwindow.cc

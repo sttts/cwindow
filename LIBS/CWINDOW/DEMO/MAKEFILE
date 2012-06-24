@@ -1,0 +1,4 @@
+all:: demo.exe
+demo.exe:: demo.cc 
+	gcc -I../h -o demo.exe demo.cc ../libs/djgpp/libcwin.a
+

@@ -1,0 +1,14 @@
+CWINDOW library 0.3 (c) by Stefan Schimanski & Janko Heilgeist  - 1Stein@gmx.de
+-------------------------------------------------------------------------------
+
+The following makefiles are included:
+
+makefile.bc  - Borland C++ 3.1
+makefile.gcc - DJGPP 2.x
+makefile.wat - Watcom C/C++ 10.x
+
+The libraries are created in the subdirectory LIBS.
+The directory DEMO includes a demo that demonstrates the library.
+
+===============================================================================
+CWindow is freeware. Use it on your own risk.
